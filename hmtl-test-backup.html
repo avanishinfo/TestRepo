@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ICAMPS-Process9</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <button id="myBtn">Convert</button>
+    
+    
+</body>
+
+<script>
+
+    const payL = {
+    "longUrl" : "https://www.avanish.dev/guitar",
+    "expirationDate": ""
+}
+const element = document.getElementById("myBtn");
+element.addEventListener("click", myFunction);
+
+async function myFunction() {
+const response = await fetch('http://localhost:8080/api/v1/shorturl' , {
+  method: 'POST',
+  body: JSON.stringify(payL),
+  headers: {
+    'Content-type' : 'application/json',
+    'Access-Control-Allow-Origin': "*"
+  }
+})
+
+const data = await response.json();
+console.log(data);
+}
+// function myFunction() {
+//        // console.log([...payL])
+
+//         fetch('http://localhost:8080/api/v1/shorturl',{
+            
+//             method: "POST",
+//             body: payL,
+//             headers: {
+//       'Access-Control-Allow-Origin': true,
+//       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582',
+//       'Content-Type': 'text/plain',
+//       }
+//         })
+//         .then(res => res.json())
+//         .then(data => console.log(data))
+//         .catch(err => console.log(err));
+// }
+
+
+</script>
+
+</html>
