@@ -19,7 +19,7 @@ const Home = () => {
         var e = document.getElementById("language");
         var text = e.options[e.selectedIndex].text;
 
-        axios.post('https://translate.moxwave.com/p9/MOXAPI.ashx', {
+        axios.post('/api/v1/testurl', {
             "categories": "Electronics, Mobile ",
             "data": [
                 {
