@@ -20,7 +20,7 @@ const Home = () => {
   let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', 'https://translate.moxwave.com');
+        headers.append('Access-Control-Allow-Origin', 'https://test.avanish.dev/');
         headers.append('Access-Control-Allow-Credentials', 'true');
 
 
