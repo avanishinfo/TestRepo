@@ -8,14 +8,13 @@ import axios from 'axios';
 //https://translate.moxwave.com/p9/MOXAPI.ashx
 
 const Home = () => {
- //const url = ""
+ const baseUrl = "https://api.publicapis.org"
 
   let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Credentials', 'true');
-
 
     const onType = async (e) => {
         const search = e.target.value 
@@ -41,7 +40,7 @@ const Home = () => {
             "recid": "176972"
         }
 
-        axios("/entries", {
+        axios(baseUrl+"/entries", {
             method: 'GET',
             headers: headers
           }).then(function (response) {
