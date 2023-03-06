@@ -26,7 +26,6 @@ const Home = () => {
 
     const onType = async (e) => {
         const search = e.target.value 
-url
         var e = document.getElementById("language");
         var text = e.options[e.selectedIndex].text;
 
