@@ -11,7 +11,7 @@ import axios from 'axios';
 // const app = new Application(canvas);
 // app.load('https://prod.spline.design/Md35uQyny7j-LEMl/scene.splinecode');
 
-const url = "http://localhost:8089/api/v1/testurl"
+const url = "https://translate.moxwave.com/p9/MOXAPI.ashx"
 
 const Home = () => {
 
