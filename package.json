@@ -2,7 +2,11 @@
   "name": "avanish-portfolio-new",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://translate.moxwave.com",
+  "proxy": {
+    "/p9/MOXAPI.ashx": {
+        "target": "https://translate.moxwave.com"
+    }
+},
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@splinetool/runtime": "^0.9.218",

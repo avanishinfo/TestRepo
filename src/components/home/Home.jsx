@@ -63,6 +63,7 @@ const Home = () => {
             
         })
         .catch(function (error) {
+            console.log("url: " + url);
             console.log(error);
         });
         
