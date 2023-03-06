@@ -5,22 +5,15 @@ import Data from "./Data";
 import ScrollDown from "./ScrollDown";
 import axios from 'axios';
 
-// import { Application } from '@splinetool/runtime';
-    
-// const canvas = document.getElementById('canvas3d');
-// const app = new Application(canvas);
-// app.load('https://prod.spline.design/Md35uQyny7j-LEMl/scene.splinecode');
 //https://translate.moxwave.com/p9/MOXAPI.ashx
 
-const url = "/p9/MOXAPI.ashx"
-
 const Home = () => {
+ const url = "/p9/MOXAPI.ashx"
 
-    
   let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', 'https://test.avanish.dev/');
+        headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Credentials', 'true');
 
 
