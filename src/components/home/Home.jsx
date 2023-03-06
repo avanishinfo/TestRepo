@@ -10,10 +10,19 @@ import axios from 'axios';
 // const canvas = document.getElementById('canvas3d');
 // const app = new Application(canvas);
 // app.load('https://prod.spline.design/Md35uQyny7j-LEMl/scene.splinecode');
+//https://translate.moxwave.com/p9/MOXAPI.ashx
 
-const url = "https://translate.moxwave.com/p9/MOXAPI.ashx"
+const url = "/p9/MOXAPI.ashx"
 
 const Home = () => {
+
+    
+  let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Accept', 'application/json');
+        headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Credentials', 'true');
+
 
     const onType = async (e) => {
         const search = e.target.value 
@@ -21,7 +30,7 @@ const Home = () => {
         var e = document.getElementById("language");
         var text = e.options[e.selectedIndex].text;
 
-        axios.post(url, {
+        var da = {
             "categories": "Electronics, Mobile ",
             "data": [
                 {
@@ -38,8 +47,16 @@ const Home = () => {
             ],
             "priority": "1",
             "recid": "176972"
-        })
-        .then(function (response) {
+        }
+
+        axios(url, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: headers,
+            data: da,
+            withCredentials: true,
+            credentials: 'same-origin',
+          }).then(function (response) {
             const dataD = response.data.data[0];
             const resultText = dataD.text;
             document.getElementById("result").innerHTML = resultText;            
@@ -48,7 +65,7 @@ const Home = () => {
         .catch(function (error) {
             console.log(error);
         });
-
+        
     }
 
     return (
