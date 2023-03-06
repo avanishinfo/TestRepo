@@ -11,6 +11,8 @@ import axios from 'axios';
 // const app = new Application(canvas);
 // app.load('https://prod.spline.design/Md35uQyny7j-LEMl/scene.splinecode');
 
+const url = "http://localhost:8089/api/v1/testurl"
+
 const Home = () => {
 
     const onType = async (e) => {
@@ -19,7 +21,7 @@ const Home = () => {
         var e = document.getElementById("language");
         var text = e.options[e.selectedIndex].text;
 
-        axios.post('/api/v1/testurl', {
+        axios.post(url, {
             "categories": "Electronics, Mobile ",
             "data": [
                 {
