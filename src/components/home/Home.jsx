@@ -8,7 +8,7 @@ import axios from 'axios';
 //https://translate.moxwave.com/p9/MOXAPI.ashx
 
 const Home = () => {
- const url = "/p9/MOXAPI.ashx"
+ //const url = ""
 
   let headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -41,7 +41,7 @@ const Home = () => {
             "recid": "176972"
         }
 
-        axios(url, {
+        axios("/p9/MOXAPI.ashx", {
             method: 'POST',
             headers: headers,
             data: da
