@@ -41,11 +41,11 @@ const Home = () => {
             "recid": "176972"
         }
 
-        axios("/p9/MOXAPI.ashx", {
-            method: 'POST',
-            headers: headers,
-            data: da
+        axios("/entries", {
+            method: 'GET',
+            headers: headers
           }).then(function (response) {
+            console.log(response)
             const dataD = response.data.data[0];
             const resultText = dataD.text;
             document.getElementById("result").innerHTML = resultText;            
