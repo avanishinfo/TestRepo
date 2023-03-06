@@ -43,11 +43,8 @@ const Home = () => {
 
         axios(url, {
             method: 'POST',
-            mode: 'no-cors',
             headers: headers,
-            data: da,
-            withCredentials: true,
-            credentials: 'same-origin',
+            data: da
           }).then(function (response) {
             const dataD = response.data.data[0];
             const resultText = dataD.text;
@@ -55,7 +52,7 @@ const Home = () => {
             
         })
         .catch(function (error) {
-            console.log("url: " + url);
+            //console.log("url: " + url);
             console.log(error);
         });
         

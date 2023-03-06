@@ -1,6 +1,7 @@
 {
   "name": "avanish-portfolio-new",
   "version": "0.1.0",
+  "proxy": "https://translate.moxwave.com",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -25,7 +26,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://translate.moxwave.com",
   "eslintConfig": {
     "extends": [
       "react-app",
